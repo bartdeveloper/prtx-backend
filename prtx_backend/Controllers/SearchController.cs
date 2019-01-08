@@ -19,7 +19,7 @@ namespace prtx_backend.Controllers
         {
 
             SearchEngine se = new SearchEngine();
-            var searchingProducts = await se.searchProducts(query);
+            var searchingProducts = await se.SearchProducts(query);
 
             return searchingProducts;
 

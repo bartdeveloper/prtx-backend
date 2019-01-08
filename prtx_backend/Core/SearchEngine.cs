@@ -9,7 +9,7 @@ namespace prtx_backend.Core
 {
     public class SearchEngine
     {
-        public async Task<IEnumerable<Product>> searchProducts(string query)
+        public async Task<IEnumerable<Product>> SearchProducts(string query)
         {
 
             PRTXEntities db = new PRTXEntities();

@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prtx_backend", "prtx_backend\prtx_backend.csproj", "{7DB1CCD5-F028-4085-9263-4AC9840D7478}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prtx_backend_tests", "prtx_backend_tests\prtx_backend_tests.csproj", "{7CCB20BB-41EE-4ABE-A891-716D20B71683}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7DB1CCD5-F028-4085-9263-4AC9840D7478}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DB1CCD5-F028-4085-9263-4AC9840D7478}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DB1CCD5-F028-4085-9263-4AC9840D7478}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CCB20BB-41EE-4ABE-A891-716D20B71683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CCB20BB-41EE-4ABE-A891-716D20B71683}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CCB20BB-41EE-4ABE-A891-716D20B71683}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CCB20BB-41EE-4ABE-A891-716D20B71683}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
