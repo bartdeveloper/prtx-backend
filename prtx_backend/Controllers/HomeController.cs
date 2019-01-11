@@ -10,7 +10,7 @@ namespace prtx_backend.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = "Rest API for PRTX";
 
             return View();
         }
