@@ -12,18 +12,7 @@ namespace prtx_backend_tests
     [TestClass]
     public class SearchTest
     {
-        [TestMethod]
-        public void TestSearchControllerWithQuery()
-        {
-
-            SearchController controller = new SearchController();
-
-            var result = controller.Get("profil");
-
-            Assert.IsNotNull(result);
-
-        }
-
+       
         [TestMethod]
         public void TestSearchEngine()
         {

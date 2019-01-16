@@ -14,12 +14,18 @@ namespace prtx_backend.Controllers
     public class SearchController : ApiController
     {
 
+        private readonly ISearch _repo;
+
+        public SearchController(ISearch repo)
+        {
+            _repo = repo;
+        }
+
         // GET api/search/query
         public async Task<IEnumerable<Product>> Get(string query)
         {
 
-            SearchEngine se = new SearchEngine();
-            var searchingProducts = await se.SearchProducts(query);
+            var searchingProducts = await _repo.SearchProducts(query);
 
             return searchingProducts;
 

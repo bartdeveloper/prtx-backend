@@ -7,8 +7,9 @@ using System.Web;
 
 namespace prtx_backend.Core
 {
-    public class SearchEngine
+    public class SearchEngine: ISearch
     {
+ 
         public async Task<IEnumerable<Product>> SearchProducts(string query)
         {
 
