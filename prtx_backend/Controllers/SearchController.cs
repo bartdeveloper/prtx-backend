@@ -25,9 +25,7 @@ namespace prtx_backend.Controllers
         public async Task<IEnumerable<Product>> Get(string query)
         {
 
-            var searchingProducts = await _repo.SearchProducts(query);
-
-            return searchingProducts;
+            return await _repo.SearchProducts(query);
 
         }
 

@@ -15,9 +15,7 @@ namespace prtx_backend.Core
 
             PRTXEntities db = new PRTXEntities();
 
-            var products = await db.Products.Where(p => p.name.Contains(query) || p.description.Contains(query)).ToListAsync();
-
-            return products;
+            return await db.Products.Where(p => p.name.Contains(query) || p.description.Contains(query)).ToListAsync();
 
         }
     }

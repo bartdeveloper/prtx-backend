@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using prtx_backend;
 using prtx_backend.Controllers;
 using prtx_backend.Core;
 using System;
@@ -18,7 +19,7 @@ namespace prtx_backend_tests
         {
             SearchEngine se = new SearchEngine();
 
-            var searchingProducts = se.SearchProducts("profil");
+            Task<IEnumerable<Product>> searchingProducts = se.SearchProducts("profil");
 
             Assert.IsNotNull(searchingProducts);
         }
