@@ -22,10 +22,10 @@ namespace prtx_backend.Controllers
         }
 
         // GET api/search/query
-        public async Task<IEnumerable<Product>> Get(string query)
+        public IQueryable<Product> Get(string query)
         {
 
-            return await _searchRepo.SearchProducts(query);
+            return _searchRepo.SearchProducts(query);
 
         }
 

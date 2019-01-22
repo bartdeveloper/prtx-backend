@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Formatting;
+using System.Net.Http.Headers;
 using System.Web.Http;
 
 namespace prtx_backend
@@ -9,12 +12,20 @@ namespace prtx_backend
     {
         public static void Register(HttpConfiguration config)
         {
-            // Web API configuration and services
-
-            // Web API routes
+            
             config.MapHttpAttributeRoutes();
 
             config.EnableCors();
+
+            config.Formatters.Clear();
+
+            config.Formatters.Add(new JsonMediaTypeFormatter()
+            {
+                SerializerSettings = new JsonSerializerSettings
+                {
+                    Formatting = Formatting.Indented
+                }
+            });
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

@@ -19,7 +19,7 @@ namespace prtx_backend_tests
         {
             SearchEngine se = new SearchEngine();
 
-            Task<IEnumerable<Product>> searchingProducts = se.SearchProducts("profil");
+            IQueryable<Product> searchingProducts = se.SearchProducts("profil");
 
             Assert.IsNotNull(searchingProducts);
         }
