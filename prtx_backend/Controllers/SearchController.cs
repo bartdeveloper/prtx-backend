@@ -22,7 +22,7 @@ namespace prtx_backend.Controllers
         }
 
         // GET api/search/query
-        public IQueryable<Product> Get(string query)
+        public IEnumerable<Product> Get(string query)
         {
 
             return _searchRepo.SearchProducts(query);

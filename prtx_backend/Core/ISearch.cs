@@ -8,6 +8,6 @@ namespace prtx_backend.Core
 {
     public interface ISearch
     {
-        IQueryable<Product> SearchProducts(string query);
+        IEnumerable<Product> SearchProducts(string query);
     }
 }

@@ -10,7 +10,7 @@ namespace prtx_backend.Core
     public class SearchEngine: ISearch
     {
  
-        public IQueryable<Product> SearchProducts(string query)
+        public IEnumerable<Product> SearchProducts(string query)
         {
 
             PRTXEntities db = new PRTXEntities();
