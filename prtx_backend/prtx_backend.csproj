@@ -196,7 +196,7 @@
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Core\ISearch.cs" />
     <Compile Include="Repository\IRepositoryContext.cs" />
-    <Compile Include="Repository\SearchEngine.cs" />
+    <Compile Include="DAL\SearchEngine.cs" />
     <Compile Include="DBModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
