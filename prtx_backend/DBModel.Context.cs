@@ -9,11 +9,12 @@
 
 namespace prtx_backend
 {
+    using prtx_backend.Repository;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PRTXEntities : DbContext
+    public partial class PRTXEntities : DbContext, IRepositoryContext
     {
         public PRTXEntities()
             : base("name=PRTXEntities")
@@ -25,6 +26,6 @@ namespace prtx_backend
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Product> Products { get; set; }
+        public virtual IDbSet<Product> Products { get; set; }
     }
 }

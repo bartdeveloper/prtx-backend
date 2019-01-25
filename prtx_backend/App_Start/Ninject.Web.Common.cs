@@ -12,6 +12,7 @@ namespace prtx_backend.App_Start
     using Ninject.Web.Common;
     using Ninject.Web.Common.WebHost;
     using prtx_backend.Core;
+    using prtx_backend.Repository;
 
     public static class NinjectWebCommon 
     {
@@ -63,6 +64,7 @@ namespace prtx_backend.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<ISearch>().To<SearchEngine>();
+            kernel.Bind<IRepositoryContext>().To<PRTXEntities>();
         }        
     }
 }

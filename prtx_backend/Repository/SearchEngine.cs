@@ -1,4 +1,5 @@
-﻿using System;
+﻿using prtx_backend.Repository;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -9,16 +10,19 @@ namespace prtx_backend.Core
 {
     public class SearchEngine: ISearch
     {
- 
+
+        private readonly IRepositoryContext repoContext;
+
+        public SearchEngine(IRepositoryContext repoContext)
+        {
+            this.repoContext = repoContext;
+        }
+
         public IEnumerable<Product> SearchProducts(string query)
         {
-
-            PRTXEntities db = new PRTXEntities();
-
-            IQueryable<Product> filteredProducts = db.Products.Where(p => p.name.Contains(query) || p.description.Contains(query));
+            IQueryable<Product> filteredProducts = repoContext.Products.Where(p => p.name.Contains(query) || p.description.Contains(query));
 
             return filteredProducts;
-
         }
     }
 }
